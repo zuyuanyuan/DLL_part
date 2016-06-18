@@ -1,0 +1,44 @@
+<distribute location="y:\nxcocadapp\distribute\release\" virtual_disk="r:" pkg_name="nxcocadapp">
+  <comx_sdk location="y:\comx_sdk\" env_variable="COMX_SDK">
+    <addition_module value="pcre.dll" />
+    <addition_module value="cximagecrt.dll" />
+    <addition_module value="zlib.dll" />
+    <data_dir value="data" />
+    <data_dir value="pic" />
+    <data_dir value="picture" />
+    <data_dir value="kul" />
+    <release_lib>
+      <item value="base" />
+      <item value="acis" />
+      <item value="dlut_mesher" />
+      <item value="fem" />
+      <item value="gl" />
+      <item value="math" />
+      <item value="mesh" />
+      <item value="ui" />
+      <item value="utils" />
+      <item value="xml" />
+    </release_lib>
+    <addition_path value="common" />
+  </comx_sdk>
+  <software_package location="y:\nxcocadapp\" env_variable="NXCOCADAPP">
+    <data_dir value="data" />
+    <data_dir value="kul" />
+    <data_dir value="picture" />
+    <release_lib>
+      <item value="module" />
+      <item value="uiplugin" />
+    </release_lib>
+    <script_dir value="script" />
+    <kproduct value="nxcocadapp.kproduct" />
+  </software_package>
+  <pkg_info>
+    <MinVersion value=",5.01.2600" />
+    <AppCopyright value="Kingmesh Corp." />
+    <AppName value="KMAS/Nxcocadapp" />
+    <AppVerName value="2009" />
+    <DefaultDirName value="KMAS\Nxcocadapp" />
+    <DefaultGroupName value="Kingmesh Analysis System" />
+    <ShortcutName value="KMAS Nxcocadapp" />
+  </pkg_info>
+</distribute>

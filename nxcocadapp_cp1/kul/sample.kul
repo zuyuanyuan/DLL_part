@@ -1,0 +1,13 @@
+<kul>
+  <toolbar name="sample" id="0xaf8f110b-0x6c75-0x4706-0x99-0x9f-0xe7-0x4e-0x47-0x72-0xfd-0x79" menupath="KUL.Sample\n3" dock="bottom" newline="no" show="yes">
+    <item label="Rotate" bitmap="rotate" is_on_toolbar="yes" is_on_menubar="yes" tip="Rotate" help="Rotate" />
+    <item label="Pane" bitmap="pan" is_on_toolbar="yes" is_on_menubar="yes" tip="Pan" help="Pan" />
+    <item label="Zoom" bitmap="zoom" is_on_toolbar="yes" is_on_menubar="yes" tip="Zoom" help="Zoom" />
+    <item label="Zoom Window" bitmap="zoom_window" is_on_toolbar="yes" is_on_menubar="yes" tip="Zoom Window" help="Zoom Window" />
+    <item label="-" />
+    <item label="Fit" bitmap="fit" is_on_toolbar="yes" is_on_menubar="yes" tip="Fit" help="Fit" />
+    <radio_group ids="0,1,2,3" num="4" />
+    <!--radio_group ids = "0,1,2,3" num = "4" default = "1"/-->
+    <!--check_item id = "5" is_check = "yes"/-->
+  </toolbar>
+</kul>

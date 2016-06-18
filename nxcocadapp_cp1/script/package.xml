@@ -1,0 +1,58 @@
+<package clsname="CLSID_INxcocadappPackage" clsid="0x77c018c0-0x71bf-0x4b0b-0xaa-0xeb-0x88-0x45-0x9c-0xd6-0x0-0xf2">
+  <uiconfig title="KMAS|Nxcocadapp Application Ver1.0" max="yes" lockbar="yes" enable_view2d="no" enable_console="no">
+    <toolbar name="Common" dock="top" hide="no" newline="yes"></toolbar>
+    <toolbar name="Transform" dock="top" hide="no" newline="no"></toolbar>
+    <toolbar name="Stdview" dock="top" hide="no" newline="no"></toolbar>
+    <toolbar name="Ui:Appearance" dock="top" hide="no" newline="no"></toolbar>
+    <toolbarInitList>
+      <item id="0xaf8f110b-0x6c75-0x4706-0x99-0x9f-0xe7-0x4e-0x47-0x72-0xfd-0x79"></item>
+    </toolbarInitList>
+  </uiconfig>
+  <functions>
+    <addPropertys>
+      <addPropertyItem name="fem:data" clsid="CLSID_IFemCore" iid="IID_IFemCore" hide="no" />
+      <addPropertyItem name="fem:render" clsid="CLSID_IFemRender" iid="IID_IFemRender" hide="no" />
+      <addPropertyItem name="fem:serialize" clsid="CLSID_IFemSerialize" iid="IID_IFemSerialize2" hide="no" />
+      <addPropertyItem name="fem:material" clsid="CLSID_IGlMaterial" iid="IID_IGlMaterialCustomer" hide="no" />
+      <addPropertyItem name="fem:post" clsid="CLSID_IFemPost" iid="IID_IFemPost" hide="no" />
+      <addPropertyItem name="fem:postex" clsid="CLSID_IFemPostEx" iid="IID_IFemPostEx" hide="no" />
+      <addPropertyItem name="acis:data" clsid="CLSID_IAcisCore" iid="IID_IAcisCore" hide="no" />
+      <addPropertyItem name="acis:render" clsid="CLSID_IAcisRender" iid="IID_IAcisRender" hide="no" />
+      <addPropertyItem name="acis:serialize" clsid="CLSID_IAcisSerialize" iid="IID_IAcisSerialize" hide="no" />
+      <addPropertyItem name="gl:common:display" clsid="CLSID_IGlCommonDisplay" iid="IID_IGlCommonDisplay" hide="no" />
+    </addPropertys>
+    <educePropertys>
+      <educePropertyItem name="fem:render:content" from="fem:render" iid="IID_IGlContentRender" hide="yes" />
+      <educePropertyItem name="fem:render:notify" from="fem:render" iid="IID_IFemCoreModifiedNotify" hide="yes" />
+      <educePropertyItem name="fem:material:connect" from="fem:material" iid="IID_IGlMaterialConnector" hide="yes" />
+      <educePropertyItem name="gl:common:display:render" from="gl:common:display" iid="IID_IGlContentRender" hide="yes" />
+      <educePropertyItem name="fem:data:sensor:lcs" from="fem:data" iid="IID_IGlSensorLCS" hide="yes" />
+      <educePropertyItem name="acis:render:notify" from="acis:render" iid="IID_IAcisCoreNotify" hide="yes" />
+    </educePropertys>
+    <addServices>
+      <addServiceItem name="gl:content:service" clsid="CLSID_IGlContent" iid="IID_IGlContentConnector" />
+      <addServiceItem name="ui:progress:service" clsid="CLSID_IUiProgressBar" iid="IID_IUiProgressBar" />
+      <addServiceItem name="xml:stream:service" clsid="CLSID_IXmlStream" iid="IID_IXmlStream" />
+      <addServiceItem name="ui:apperance:service" clsid="CLSID_IUiAppearance" iid="IID_IComxUiPlugin" />
+      <addServiceItem name="gl:sensor:toolkit:service" clsid="CLSID_IGlSensor" iid="IID_IGlSensorToolkit" />
+    </addServices>
+    <addConnects>
+      <addConnectItem src="fem:render" target="fem:data" />
+      <addConnectItem src="gl:content:service" target="fem:render:content" />
+      <addConnectItem src="fem:render" target="fem:material:connect" />
+      <addConnectItem src="fem:serialize" target="fem:data" />
+      <addConnectItem src="fem:serialize" target="ui:progress:service" />
+      <addConnectItem src="ui:apperance:service" target="fem:render" />
+      <addConnectItem src="gl:content:service" target="gl:common:display:render" />
+      <addConnectItem src="gl:common:display" target="fem:data" />
+      <addConnectItem src="gl:sensor:toolkit:service" target="fem:data:sensor:lcs" />
+      <addConnectItem src="fem:data" target="fem:render:notify" />
+      <addConnectItem src="acis:render" target="acis:data" />
+      <addConnectItem src="acis:serialize" target="acis:data" />
+      <addConnectItem src="acis:serialize" target="ui:progress:service" />
+      <addConnectItem src="acis:data" target="acis:render:notify" />
+      <addConnectItem src="acis:render" target="fem:material:connect" />
+      <addConnectItem src="ui:apperance:service" target="acis:render" />
+    </addConnects>
+  </functions>
+</package>

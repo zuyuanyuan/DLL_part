@@ -1,0 +1,37 @@
+<config>
+  <path>
+    <home_path>"y:\nxcocadapp\"</home_path>
+    <root_path>"y:\comx_sdk\"</root_path>
+    <script_paths>
+      <item>"/lib/base/script/"</item>
+      <item>"/lib/acis/script/"</item>
+      <item>"/lib/dlut_mesher/script/"</item>
+      <item>"/lib/fem/script/"</item>
+      <item>"/lib/gl/script/"</item>
+      <item>"/lib/math/script/"</item>
+      <item>"/lib/mesh/script/"</item>
+      <item>"/lib/ui/script/"</item>
+      <item>"/lib/utils/script/"</item>
+      <item>"/lib/xml/script/"</item>
+      <item>"~/script/"</item>
+    </script_paths>
+    <data_paths>
+      <item>"~/data/"</item>
+    </data_paths>
+    <module_path>
+      <item>"/lib/base/"</item>
+      <item>"/lib/acis/"</item>
+      <item>"/lib/dlut_mesher/"</item>
+      <item>"/lib/fem/"</item>
+      <item>"/lib/gl/"</item>
+      <item>"/lib/math/"</item>
+      <item>"/lib/mesh/"</item>
+      <item>"/lib/ui/"</item>
+      <item>"/lib/utils/"</item>
+      <item>"/lib/xml/"</item>
+      <item>"~/uiplugin/"</item>
+      <item>"~/module/"</item>
+    </module_path>
+  </path>
+  <package>"package.xml"</package>
+</config>

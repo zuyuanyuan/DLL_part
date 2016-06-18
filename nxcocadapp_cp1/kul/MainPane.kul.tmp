@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="gb2312"?>
+<kul_pkg type="ui" name="MainPane" xmlns="http://www.kingmesh.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kingmesh.com kul.xsd">
+<property name="id">0xdeaf1b98-0x4f90-0x4f8f-0xa5-0xe4-0x1c-0xb6-0x55-0x9d-0x7e-0x39</property>
+<widget type="form" name="MainPane_pane">
+<property name="id">0x54212935-0x2346-0x46a7-0xa2-0x0c-0xc4-0x5e-0x65-0x94-0x6f-0xbe</property>
+<property name="title">NXCoCADApp</property>
+<property name="titlebar">true</property>
+<property name="maximum_box">false</property>
+<property name="minimum_box">false</property>
+<property name="close_box">false</property>
+<property name="border">true</property>
+<property name="bkcolor">gray</property>
+<property name="resize">false</property>
+<property name="center">center</property>
+<property name="toolwindow">false</property>
+<property name="icon">kmas</property>
+<property name="width">auto</property>
+<property name="height">auto</property>
+<property name="font">Microsoft Sans Serif</property>
+<property name="font_size">10</property>
+<property name="margin">1</property>
+<property name="style">popup</property>
+<property name="show">normal</property>
+<property name="embed">false</property>
+<property name="app_window">true</property>
+<property name="attachment">none</property>
+<property name="attachment_size">5</property>
+<property name="javascript">Main_pane.js</property>
+<property name="js_lib">/js/class/widget_wrap.js;/js/socket.io/socket.io.js</property>
+<property name="default_hot_key">901,ctrl_shift,g;902,ctrl_shift,b;903,ctrl_shift,n;904,ctrl_shift,e;905,ctrl_shift,d</property>
+<property name="hot_key"/>
+<property name="onHotKey"/>
+<property name="alpha">255</property>
+<property name="topmost">false</property>
+<property name="is_service">true</property>
+<widget type="vbox">
+<property name="margin">1</property>
+<property name="adjust">auto</property>
+<widget type="list">
+<property name="id_alias">nil</property>
+<property name="width">180</property>
+<property name="height">90</property>
+<property name="gray">false</property>
+<property name="visible">true</property>
+<property name="adjust">fixed</property>
+<property name="type">report</property>
+<property name="align">top</property>
+<property name="sort">none</property>
+<property name="single_selection">true</property>
+<property name="auto_arrange">false</property>
+<property name="no_label_wrap">false</property>
+<property name="edit_labels">false</property>
+<property name="show_selection_always">false</property>
+<property name="owner_data">false</property>
+<property name="simple_bind">receiveValue</property>
+<property name="table_bind">receiveList</property>
+<property name="index2_bind">receiveIndex</property>
+<property name="enable_bind"/>
+<property name="visible_bind"/>
+<property name="data">
+                    <header>
+                        <item label="CoordinateX" width="100" />
+                        <item label="CoordinateY" width="100" />
+                        <item label="CoordinateZ" width="100" />
+                    </header>
+                    <image_list>var,new,kmas</image_list>
+                    <content>0,item11,item12,item13,1,item21,item22,item23</content>
+                </property>
+<property name="onClick"/>
+<property name="onDoubleClick"/>
+<property name="onHeaderClick"/>
+<property name="handle_bind"/>
+</widget>
+<widget type="separator">
+<property name="id_alias">nil</property>
+<property name="gray">false</property>
+<property name="visible">true</property>
+<property name="margin">2</property>
+</widget>
+<widget type="vbox">
+<property name="margin">1</property>
+<property name="adjust">auto</property>
+<widget type="hbox">
+<property name="margin">1</property>
+<property name="adjust">auto</property>
+<widget type="label">
+<property name="id_alias">nil</property>
+<property name="width">40</property>
+<property name="auto_width">false</property>
+<property name="height">8</property>
+<property name="border">false</property>
+<property name="text">服务器地址</property>
+<property name="align">right</property>
+<property name="gray">false</property>
+<property name="visible">true</property>
+<property name="adjust">fixed</property>
+<property name="handle_bind"/>
+<property name="visible_bind"/>
+</widget>
+<widget type="edit">
+<property name="id_alias">nil</property>
+<property name="width">150</property>
+<property name="height">12</property>
+<property name="gray">false</property>
+<property name="visible">true</property>
+<property name="align">left</property>
+<property name="multiline">false</property>
+<property name="password">false</property>
+<property name="adjust">fixed</property>
+<property name="wrap">true</property>
+<property name="data"/>
+<property name="readonly">false</property>
+<property name="valid_check">false</property>
+<property name="valid_okay">.*</property>
+<property name="valid_warning">.*</property>
+<property name="simple_bind">ip</property>
+<property name="valid_bind"/>
+<property name="enable_bind"/>
+<property name="visible_bind"/>
+<property name="onChange"/>
+<property name="handle_bind"/>
+</widget>
+</widget>
+<widget type="hbox">
+<property name="margin">1</property>
+<property name="adjust">auto</property>
+<widget type="label">
+<property name="id_alias">nil</property>
+<property name="width">40</property>
+<property name="auto_width">false</property>
+<property name="height">8</property>
+<property name="border">false</property>
+<property name="text">连接状态</property>
+<property name="align">right</property>
+<property name="gray">false</property>
+<property name="visible">true</property>
+<property name="adjust">fixed</property>
+<property name="handle_bind"/>
+<property name="visible_bind"/>
+</widget>
+<widget type="edit">
+<property name="id_alias">nil</property>
+<property name="width">150</property>
+<property name="height">12</property>
+<property name="gray">true</property>
+<property name="visible">true</property>
+<property name="align">left</property>
+<property name="multiline">false</property>
+<property name="password">false</property>
+<property name="adjust">fixed</property>
+<property name="wrap">true</property>
+<property name="data"/>
+<property name="readonly">false</property>
+<property name="valid_check">false</property>
+<property name="valid_okay">.*</property>
+<property name="valid_warning">.*</property>
+<property name="simple_bind">status</property>
+<property name="valid_bind"/>
+<property name="enable_bind"/>
+<property name="visible_bind"/>
+<property name="onChange"/>
+<property name="handle_bind"/>
+</widget>
+</widget>
+<widget type="hbox">
+<property name="margin">1</property>
+<property name="adjust">auto</property>
+<widget type="space">
+<property name="size">auto</property>
+</widget>
+<widget type="pushbutton">
+<property name="label">连接</property>
+<property name="bitmap">simple</property>
+<property name="id_alias">nil</property>
+<property name="width">50</property>
+<property name="height">14</property>
+<property name="default">false</property>
+<property name="gray">false</property>
+<property name="visible">true</property>
+<property name="adjust">fixed</property>
+<property name="bitmap_align">left</property>
+<property name="flat">false</property>
+<property name="shadow">false</property>
+<property name="shadow_type">soft</property>
+<property name="color">auto</property>
+<property name="can_check">false</property>
+<property name="onClick">OnSearch();</property>
+<property name="enable_bind"/>
+<property name="simple_bind"/>
+<property name="valid_bind"/>
+<property name="visible_bind"/>
+<property name="handle_bind"/>
+<property name="tip"/>
+</widget>
+<widget type="pushbutton">
+<property name="label">退出</property>
+<property name="bitmap">close</property>
+<property name="id_alias">nil</property>
+<property name="width">50</property>
+<property name="height">14</property>
+<property name="default">false</property>
+<property name="gray">false</property>
+<property name="visible">true</property>
+<property name="adjust">fixed</property>
+<property name="bitmap_align">left</property>
+<property name="flat">false</property>
+<property name="shadow">false</property>
+<property name="shadow_type">soft</property>
+<property name="color">auto</property>
+<property name="can_check">false</property>
+<property name="onClick">pane.Close();</property>
+<property name="enable_bind"/>
+<property name="simple_bind"/>
+<property name="valid_bind"/>
+<property name="visible_bind"/>
+<property name="handle_bind"/>
+<property name="tip"/>
+</widget>
+</widget>
+</widget>
+</widget>
+</widget>
+</kul_pkg>

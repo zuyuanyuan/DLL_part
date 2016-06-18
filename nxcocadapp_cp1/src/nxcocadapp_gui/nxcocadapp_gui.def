@@ -1,0 +1,7 @@
+; nxcocadapp_gui.def : Declares the module parameters for the DLL.
+
+LIBRARY      "nxcocadapp_gui"
+DESCRIPTION  'nxcocadapp_gui Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

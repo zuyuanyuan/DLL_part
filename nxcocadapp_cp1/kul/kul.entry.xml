@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312"?>
+<kul_pkg type="entry" name="nxcocadapp" xmlns="http://www.kingmesh.com">
+    <pkgid name="MainPane">
+        <location>MainPane.kul</location>
+        <value>0xdeaf1b98-0x4f90-0x4f8f-0xa5-0xe4-0x1c-0xb6-0x55-0x9d-0x7e-0x39</value>
+    </pkgid>
+    <formid name="MainPane_pane">
+        <location>MainPane.kul</location>
+        <value>0x54212935-0x2346-0x46a7-0xa2-0x0c-0xc4-0x5e-0x65-0x94-0x6f-0xbe</value>
+    </formid>
+</kul_pkg>
